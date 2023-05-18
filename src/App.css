@@ -1,6 +1,6 @@
 header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   background-color: #99999933;
   padding: 20px;
 }
@@ -21,4 +21,41 @@ header {
   aspect-ratio: 1 / 1;
   background-color: #191919;
   border-radius: 20px;
+}
+
+#titleContainer {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  position: absolute;
+  z-index: 2;
+  font-size: 250px;
+  text-align: center;
+  /* font-family: 'Comfortaa', cursive;   */
+  font-weight: 700;
+  font-family: 'Fugaz One', cursive;
+  /* font-family: 'Lemon', cursive; */
+}
+
+h1:nth-of-type(1) {
+  color: gray;
+}
+h1:nth-of-type(2) {
+  color: black;
+}
+h1:nth-of-type(3) {
+  color: white
+}
+h1:nth-of-type(4) {
+  color: var(--themeColor);
 }

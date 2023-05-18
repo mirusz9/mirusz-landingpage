@@ -1,7 +1,9 @@
 :root {
   color-scheme: dark;
   text-rendering: optimizeLegibility;
+  --themeColor: #ffaa00;
   --darkBackgroundCol: #111;
+  
 }
 
 * {
@@ -15,4 +17,6 @@
   background-color: var(--darkBackgroundCol);
   width: 100vw;
   height: 100vh;
+  perspective: 5px;
+  overflow: hidden;
 }

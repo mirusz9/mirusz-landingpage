@@ -19,8 +19,9 @@ header {
 .square {
   display: inline-block;
   aspect-ratio: 1 / 1;
-  background-color: #191919;
+  background-color: #1f1f1f;
   border-radius: 20px;
+  box-shadow: #1a1a1a 6px 6px 10px -5px inset, #2a2a2a -4px -4px 10px -5px inset;
 }
 
 #titleContainer {
@@ -44,18 +45,29 @@ h1 {
   /* font-family: 'Comfortaa', cursive;   */
   font-weight: 700;
   font-family: 'Fugaz One', cursive;
+  user-select: none;
+  transition: transform .5s cubic-bezier(0.23, 1, 0.320, 1);
   /* font-family: 'Lemon', cursive; */
+  text-shadow: 0 0 10px#1a1a1aaa, 0 0 3px #111;
 }
 
 h1:nth-of-type(1) {
-  color: gray;
+  color: #35323099;
+  text-shadow: 0 0 20px #333333aa;
 }
 h1:nth-of-type(2) {
-  color: black;
+  color: #575553;
+  -webkit-mask-image: url("./assets/circle.png");
+  mask-image: url("./assets/circle.png");
+  mask-repeat: repeat;
+  mask-position: 0 -3px;
+  mask-size: 10px;
+  /* opacity: 50%; */
 }
 h1:nth-of-type(3) {
-  color: white
+  color: var(--secondary);
+  opacity: 50%;
 }
 h1:nth-of-type(4) {
-  color: var(--themeColor);
+  color: var(--primary);
 }

@@ -1,8 +1,9 @@
 :root {
   color-scheme: dark;
   text-rendering: optimizeLegibility;
-  --themeColor: #ffaa00;
-  --darkBackgroundCol: #111;
+  --primary: #ffaa00;
+  --secondary: #9c6101;
+  --darkBackgroundColFilter: brightness(10%);
   
 }
 
@@ -14,7 +15,7 @@
 
 #root {
   z-index: 0;
-  background-color: var(--darkBackgroundCol);
+  background-color: #202020;
   width: 100vw;
   height: 100vh;
   perspective: 5px;

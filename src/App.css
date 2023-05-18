@@ -1,0 +1,24 @@
+header {
+  position: relative;
+  z-index: 2;
+  background-color: #99999933;
+  padding: 20px;
+}
+
+#background {
+  /* border: 1px solid orange; */
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  font-size: 0;
+  padding: 10px;
+}
+
+
+.square {
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+  background-color: #191919;
+  border-radius: 20px;
+}

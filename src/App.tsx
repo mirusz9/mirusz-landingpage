@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Header from './Header';
 
 function debounce<T>(fn: (e: T) => void, ms: number) {
 	let timer: number | undefined;
@@ -92,9 +93,7 @@ function App() {
 
 	return (
 		<>
-			<header>
-				<h4>mirusz9</h4>
-			</header>
+		 	<Header/>
 			<div id="background" style={{ transform: getParallaxTransform(10) }}>
 				{getBackgroundSquares()}
 			</div>

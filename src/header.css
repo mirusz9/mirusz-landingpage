@@ -1,0 +1,24 @@
+header {
+	position: relative;
+	z-index: 3;
+	background-color: #cccccc22;
+	backdrop-filter: blur(5px);
+	padding: 20px 40px;
+	box-shadow: 0 0 3px #111, 0 0 10px #1a1a1aaa;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+h4 {
+	color: var(--primary);
+	font-size: 20px;
+	font-family: 'Comfortaa', cursive;
+	font-family: 'Fugaz One', cursive;
+}
+
+span {
+	font-family: 'Comfortaa', cursive;
+	padding: 0 7px;
+	color: #fff;
+}

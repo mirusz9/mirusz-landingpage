@@ -1,10 +1,9 @@
 :root {
   color-scheme: dark;
-  text-rendering: optimizeLegibility;
+  /* text-rendering: optimizeLegibility; */
   --primary: #ffaa00;
   --secondary: #9c6101;
   --darkBackgroundColFilter: brightness(10%);
-  
 }
 
 * {

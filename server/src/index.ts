@@ -13,10 +13,11 @@ const app = express();
 // const PORT = +(process?.env.PORT || 3000);
 const PORT = 3000;
 
-
-app.use(helmet());
-app.use(express.static(buildFolderPath));
+app.use(helmet({ contentSecurityPolicy: false }));
+app.use('/static', express.static(buildFolderPath));
 app.get('/', (req, res) => {
+	const IP = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+	console.log(`Request from ip: ${IP}`);
 	res.sendFile(path.join(buildFolderPath, 'index.html'));
 });
 

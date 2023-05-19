@@ -2,7 +2,7 @@ header {
 	position: relative;
 	z-index: 3;
 	background-color: #cccccc22;
-	backdrop-filter: blur(5px);
+	/* backdrop-filter: blur(5px); */
 	padding: 20px 40px;
 	box-shadow: 0 0 3px #111, 0 0 10px #1a1a1aaa;
 	display: flex;

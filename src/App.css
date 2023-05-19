@@ -13,7 +13,9 @@
 	aspect-ratio: 1 / 1;
 	background-color: #1f1f1f;
 	border-radius: 20px;
-	box-shadow: #1a1a1a 6px 6px 10px -5px inset, #2a2a2a -4px -4px 10px -5px inset;
+	/* box-shadow: #1a1a1a 6px 6px 10px -5px inset, #2a2a2a -4px -4px 10px -5px inset; */
+	box-shadow: #111 5px 5px 5px -5px inset, #1a1a1a 10px 10px 10px -5px inset, #2a2a2a -5px -5px 5px -5px inset,
+		#222 -10px -10px 10px -5px inset;
 }
 
 #titleContainer {
@@ -44,11 +46,11 @@ h1 {
 }
 
 h1:nth-of-type(1) {
-	color: #35323099;
-	text-shadow: 0 0 20px #333333aa;
+	color: hsl(var(--primaryHue), 5%, 15%);
+	text-shadow: 0 0 10px#1a1a1aaa, 0 0 3px #111, 0 0 40px hsla(var(--primaryHue), 20%, 20%, 0.6);
 }
 h1:nth-of-type(2) {
-	color: #575553;
+	color: hsl(var(--primaryHue), 10%, 30%);
 	-webkit-mask-image: url('./assets/circle.png');
 	mask-image: url('./assets/circle.png');
 	mask-repeat: repeat;
@@ -60,9 +62,10 @@ h1:nth-of-type(2) {
 	/* opacity: 50%; */
 }
 h1:nth-of-type(3) {
-	color: var(--secondary);
-	opacity: 50%;
+	color: hsl(calc(var(--primaryHue) - 0), 100%, 30%);
+	opacity: 0.5;
 }
 h1:nth-of-type(4) {
-	color: var(--primary);
+	color: hsl(var(--primaryHue), 100%, 50%);
+	/* color: var(--primary); */
 }

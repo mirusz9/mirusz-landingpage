@@ -4,6 +4,7 @@
   --primary: #ffaa00;
   --secondary: #9c6101;
   --darkBackgroundColFilter: brightness(10%);
+  --primaryHue: 40;
 }
 
 * {

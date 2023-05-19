@@ -35,6 +35,13 @@ function App() {
 		width: window.innerWidth,
 	});
 	const [mousePos, setMousePos] = useState({ x: window.innerWidth / 2 - 400, y: window.innerHeight / 2 + 400 });
+	const [hue, setHue] = useState(40);
+
+	document.documentElement.style.setProperty('--primaryHue', hue.toString());
+
+	const mouseClick = () => {
+		setHue(Math.floor(Math.random() * 360));
+	};
 
 	useEffect(() => {
 		const debouncedHandleResize = debounce(() => {
@@ -50,10 +57,12 @@ function App() {
 
 		window.addEventListener('resize', debouncedHandleResize);
 		window.addEventListener('mousemove', throttledHandleMouseMove);
+		window.addEventListener('mousedown', mouseClick);
 
 		return () => {
 			window.removeEventListener('resize', debouncedHandleResize);
 			window.removeEventListener('mousemove', throttledHandleMouseMove);
+			window.removeEventListener('mousedown', mouseClick);
 		};
 	}, []);
 
@@ -89,11 +98,9 @@ function App() {
 		return `translateX(${px}px) translateY(${py}px)`; // rotateX(${ry}deg) rotateY(${rx}deg)`
 	};
 
-	
-
 	return (
 		<>
-		 	<Header/>
+			<Header />
 			<div id="background" style={{ transform: getParallaxTransform(10) }}>
 				{getBackgroundSquares()}
 			</div>

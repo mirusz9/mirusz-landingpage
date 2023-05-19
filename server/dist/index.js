@@ -13,8 +13,26 @@ const PORT = 3000;
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(express.static(buildFolderPath));
 app.get('/', (req, res) => {
-    const IP = req.headers['x-real-ip'];
-    console.log(`Request from ip: ${IP}`);
+    // const IP = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    // console.log(`Request from ip: ${IP}`);
+    const headers = [
+        'x-client-ip',
+        'x-forwarded-for',
+        'cf-connecting-ip',
+        'fastly-client-ip',
+        'true-client-ip',
+        'x-real-ip',
+        'x-cluster-client-ip',
+        'x-forwarded',
+        'forwarded-for',
+        'forwarded',
+    ];
+    for (const header of headers) {
+        console.log(`${header} ${req.headers[header]}`);
+    }
+    console.log(req.connection.remoteAddress);
+    console.log(req.socket.remoteAddress);
+    console.log("\n------------\n");
     res.sendFile(path.join(buildFolderPath, 'entry.html'));
 });
 app.use((req, res, next) => {

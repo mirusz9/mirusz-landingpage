@@ -10,7 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const buildFolderPath = path.join(__dirname, '..', '..', 'dist');
 const app = express();
-const PORT = +(process?.env.PORT || 3000);
+// const PORT = +(process?.env.PORT || 3000);
+const PORT = 3000;
 
 
 app.use(helmet());

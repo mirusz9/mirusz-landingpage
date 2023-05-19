@@ -9,12 +9,13 @@
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"start": "nodemon server/dist/server.js",
-		"prepare": "yarn run build && cd server && tsc"
+		"ready": "yarn run build && cd server && tsc"
 	},
 	"dependencies": {
 		"dotenv": "^16.0.3",
 		"express": "^4.18.2",
 		"helmet": "^7.0.0",
+		"nodemon": "^2.0.22",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},

@@ -3,7 +3,7 @@ import './App.css';
 import Header from './Header';
 
 function debounce<T>(fn: (e: T) => void, ms: number) {
-	let timer: number | undefined;
+	let timer: NodeJS.Timeout | undefined;
 
 	return (e: T) => {
 		clearTimeout(timer);

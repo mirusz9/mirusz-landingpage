@@ -5,6 +5,7 @@
   --secondary: #9c6101;
   --darkBackgroundColFilter: brightness(10%);
   --primaryHue: 40;
+  --primary: hsl(var(--primaryHue), 100%, 50%);
 }
 
 * {

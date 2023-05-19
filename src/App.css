@@ -29,6 +29,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+    background: radial-gradient(farthest-corner, hsla(var(--primaryHue), 50%, 5%, .1) 0%, #20202019 50%, #00000066 100%);
 }
 
 h1 {
@@ -66,6 +67,6 @@ h1:nth-of-type(3) {
 	opacity: 0.5;
 }
 h1:nth-of-type(4) {
-	color: hsl(var(--primaryHue), 100%, 50%);
+	color: var(--primary);
 	/* color: var(--primary); */
 }

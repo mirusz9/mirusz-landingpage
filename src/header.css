@@ -4,9 +4,9 @@ header {
 	left: 0;
 	right: 0;
 	z-index: 3;
-	background-color: #cccccc22;
+	background-color: var(--mainBackgroundColTransparent);
 	backdrop-filter: blur(5px);
-	padding: 20px 40px;
+	padding: 15px 40px;
 	box-shadow: 0 0 3px #111, 0 0 10px #1a1a1aaa;
 	display: flex;
 	flex-direction: row;
@@ -14,11 +14,11 @@ header {
 }
 
 h4 {
-	color: var(--primary);
-	font-size: 20px;
-	font-family: 'Comfortaa', cursive;
+	color: var(--header);
+	font-size: 30px;
+	/* font-family: 'Comfortaa', cursive; */
 	font-family: 'Fugaz One', cursive;
-	text-shadow: 0 0 10px#1a1a1aaa, 0 0 3px #111;
+	/* text-shadow: 3px 0 0px #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 3px 3px 0px #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, 0 0 20px #000; */
 }
 
 span {

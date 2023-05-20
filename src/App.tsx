@@ -76,14 +76,17 @@ function App() {
 		};
 	}, []);
 
-	const getParallaxTransform = (amount: number) => {
+	const getMouseAndDepthTransform = (depth: number) => {
+		// depth of 0 is infinitely far away, depth of 10 is level with the foreground
+		const sensitivity = depth * 5;
+		const ds = scroll * (1 - depth / 10);
 		const dx = mousePos.x - window.innerWidth / 2;
-		const dy = mousePos.y + scroll - window.innerHeight / 2;
-		const px = (dx / 1000) * amount;
-		const py = (dy / 1000) * amount;
+		const dy = mousePos.y - window.innerHeight / 2;
+		const px = (dx / 1000) * sensitivity * depth;
+		const py = (dy / 1000) * sensitivity * depth + ds;
 		// const rx = (mousePos.x * 2 / window.innerWidth - 1) * amount / 200;
 		// const ry = -(mousePos.y * 2 / window.innerHeight - 1) * amount / 200;
-		return `translateX(${px}px) translateY(${py}px)`; // rotateX(${ry}deg) rotateY(${rx}deg)`
+		return `translateX(${px}px) translateY(${py}px`; // rotateX(${ry}deg) rotateY(${rx}deg)`
 	};
 
 	const getBackgroundSquares = () => {
@@ -105,7 +108,7 @@ function App() {
 							style={{
 								width: `${squareWidthIncludingMargin * squareWidthToMarginRatio}px`,
 								margin: `${(squareWidthIncludingMargin * (1 - squareWidthToMarginRatio)) / 2}px`,
-								transform: getParallaxTransform(10),
+								// transform: getParallaxTransform(10),
 							}}
 						></div>
 					))}
@@ -114,21 +117,17 @@ function App() {
 		});
 	};
 
-	const getScrollTransform = () => {
-		const py = scroll * 0.8;
-		return `translateY(${py}px)`;
-	};
 
 	return (
 		<>
-			<div id="background" style={{ top: scroll * .8 }}>
+			<div id="background" style={{ transform: getMouseAndDepthTransform(2) }}>
 				{getBackgroundSquares()}
 			</div>
 			<div id="titleContainer">
-				<h1 style={{ transform: getParallaxTransform(110) }}>mirusz</h1>
-				<h1 style={{ transform: getParallaxTransform(130) }}>mirusz</h1>
-				<h1 style={{ transform: getParallaxTransform(150) }}>mirusz</h1>
-				<h1 style={{ transform: getParallaxTransform(170) }}>mirusz</h1>
+				<h1 style={{ transform: getMouseAndDepthTransform(6) }}>mirusz</h1>
+				<h1 style={{ transform: getMouseAndDepthTransform(6.5) }}>mirusz</h1>
+				<h1 style={{ transform: getMouseAndDepthTransform(7) }}>mirusz</h1>
+				<h1 style={{ transform: getMouseAndDepthTransform(7.5) }}>mirusz</h1>
 			</div>
 			<Header />
 			<Content />

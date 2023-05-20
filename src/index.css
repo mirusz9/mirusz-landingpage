@@ -5,7 +5,11 @@
 	--secondary: #9c6101;
 	--darkBackgroundColFilter: brightness(10%);
 	--primaryHue: 40;
-	--primary: hsl(var(--primaryHue), 100%, 50%);
+	--primary: hsl(var(--primaryHue), 90%, 40%);
+	--mainBackgroundCol: hsl(var(--primaryHue), 5%, 7%);
+	--mainBackgroundColTransparent: hsla(var(--primaryHue), 5%, 50%, 0.1);
+	--header: hsl(var(--primaryHue), 100%, 70%);
+  --secondary: hsl(var(--primaryHue), 5%, 10%)
 }
 
 * {
@@ -16,10 +20,10 @@
 
 #root {
 	/* background-color: #202020; */
-  background-color: hsl(var(--primaryHue), 20%, 5%);
+	background-color: hsl(var(--primaryHue), 20%, 5%);
 	width: 100vw;
 	height: 100vh;
 	perspective: 5px;
 	overflow-x: hidden;
-  overflow-y: scroll;
+	overflow-y: scroll;
 }

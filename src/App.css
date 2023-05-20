@@ -28,7 +28,7 @@
 	/* box-shadow: #1a1a1a 6px 6px 10px -5px inset, #2a2a2a -4px -4px 10px -5px inset; */
 	box-shadow: hsla(var(--primaryHue), 10%, 1%, .7) 5px 5px 5px -5px inset, hsla(var(--primaryHue), 20%, 2%, .7) 10px 10px 10px -5px inset,
 		hsla(var(--primaryHue), 30%, 8%, .7) -5px -5px 5px -5px inset, hsla(var(--primaryHue), 20%, 7%, .7) -10px -10px 10px -5px inset;
-	/* transition: transform 0.1s cubic-bezier(0, -0.01, 0.38, 0.7); */
+	/* transition: transform 0.5s cubic-bezier(0, -0.01, 0.38, 0.7); */
 	/* transition: transform 0.1s linear; */
 }
 
@@ -55,17 +55,17 @@ h1 {
 	font-weight: 700;
 	font-family: 'Fugaz One', cursive;
 	user-select: none;
-	transition: transform 0.5s cubic-bezier(0.2, 0.84, 0.67, 0.97);
+	transition: transform 0.1s cubic-bezier(0.2, 0.84, 0.67, 0.97);
 	/* font-family: 'Lemon', cursive; */
 	text-shadow: 0 0 10px#1a1a1aaa, 0 0 3px #111;
 }
 
 h1:nth-of-type(1) {
-	color: hsl(var(--primaryHue), 5%, 15%);
+	color: hsl(var(--primaryHue), 15%, 15%);
 	text-shadow: 0 0 10px#1a1a1aaa, 0 0 3px #111, 0 0 40px hsla(var(--primaryHue), 20%, 20%, 0.6);
 }
 h1:nth-of-type(2) {
-	color: hsl(var(--primaryHue), 10%, 30%);
+	color: hsl(var(--primaryHue), 30%, 30%);
 	-webkit-mask-image: url('./assets/circle.png');
 	mask-image: url('./assets/circle.png');
 	mask-repeat: repeat;

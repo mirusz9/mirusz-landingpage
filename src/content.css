@@ -4,5 +4,50 @@ main {
 	left: 0;
 	right: 0;
 	height: 1000px;
-	background-color: #333;
+	background-color: var(--mainBackgroundCol);
+
+	display: flex;
+	flex-direction: row;
+}
+
+
+#left {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: calc(-450px + 50%);
+	min-width: 300px;
+}
+
+#right {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex: 1;
+	background-color: var(--secondary);
+}
+
+#leftContent {
+	flex: 1;
+	max-width: 300px;
+	padding: 20px 40px;
+	/* border: 1px solid red; */
+}
+
+#rightContent {
+	flex: 1;
+	max-width: 1200px;
+	padding: 20px 40px;
+	/* border: 1px solid red; */
+}
+
+section > div:last-of-type {
+	background-color: var(--secondary);
+}
+
+h2 {
+	color: var(--header);
+	/* font-family: 'Lemon', cursive; */
+	font-family: 'Fugaz One', cursive;
+	font-size: 60px;
 }

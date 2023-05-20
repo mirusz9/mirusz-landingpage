@@ -42,6 +42,9 @@ function App() {
 	const [scroll, setScroll] = useState(0);
 
 	document.documentElement.style.setProperty('--primaryHue', hue.toString());
+
+	const isBackgroundVisible = scroll / dimensions.height < 0.9;
+
 	const mouseClick = () => {
 		setHue(Math.floor(Math.random() * 360));
 	};
@@ -55,7 +58,9 @@ function App() {
 		}, 20);
 
 		const throttledHandleMouseMove = throttle<MouseEvent>((e) => {
-			setMousePos({ x: e.clientX, y: e.clientY });
+			if (isBackgroundVisible) {
+				setMousePos({ x: e.clientX, y: e.clientY });
+			}
 		}, 20);
 
 		const throttledScroll = throttle(() => {
@@ -74,9 +79,10 @@ function App() {
 			window.removeEventListener('mousedown', mouseClick);
 			root.removeEventListener('scroll', throttledScroll);
 		};
-	}, []);
+	}, [isBackgroundVisible]);
 
 	const getMouseAndDepthTransform = (depth: number) => {
+		if (!isBackgroundVisible) return '';
 		// depth of 0 is infinitely far away, depth of 10 is level with the foreground
 		const sensitivity = depth * 5;
 		const ds = scroll * (1 - depth / 10);
@@ -116,7 +122,6 @@ function App() {
 			);
 		});
 	};
-
 
 	return (
 		<>

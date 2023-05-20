@@ -22,7 +22,8 @@ h4 {
 }
 
 span {
-	font-family: 'Comfortaa', cursive;
+	/* font-family: 'Comfortaa', cursive; */
+	font-family: 'Nunito Sans', sans-serif;
 	padding: 0 7px;
 	color: #fff;
 }

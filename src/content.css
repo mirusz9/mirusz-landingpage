@@ -3,7 +3,7 @@ main {
 	top: 90vh;
 	left: 0;
 	right: 0;
-	height: 1000px;
+	height: 1500px;
 	background-color: var(--mainBackgroundCol);
 
 	display: flex;
@@ -31,19 +31,22 @@ main {
 	flex: 1;
 	max-width: 300px;
 	padding: 20px 40px;
-	/* border: 1px solid red; */
+	display: flex;
+	flex-direction: column;
 }
 
 #rightContent {
 	flex: 1;
 	max-width: 1200px;
 	padding: 20px 40px;
-	/* border: 1px solid red; */
 }
 
-section > div:last-of-type {
-	background-color: var(--secondary);
+section {
+	padding-bottom: 60px;
+	border-bottom: 1px solid #444;
+	margin-bottom: 40px;
 }
+
 
 h2 {
 	color: var(--header);

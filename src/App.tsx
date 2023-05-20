@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './Header';
+import Content from './Content';
 
 function debounce<T>(fn: (e: T) => void, ms: number) {
 	let timer: NodeJS.Timeout | undefined;
@@ -29,6 +30,8 @@ function throttle<T>(fn: (e: T) => void, ms: number) {
 		}
 	};
 }
+
+const root = document.getElementById('root')!;
 function App() {
 	const [dimensions, setDimensions] = useState({
 		height: window.innerHeight,
@@ -36,9 +39,9 @@ function App() {
 	});
 	const [mousePos, setMousePos] = useState({ x: window.innerWidth / 2 - 400, y: window.innerHeight / 2 + 400 });
 	const [hue, setHue] = useState(40);
+	const [scroll, setScroll] = useState(0);
 
 	document.documentElement.style.setProperty('--primaryHue', hue.toString());
-
 	const mouseClick = () => {
 		setHue(Math.floor(Math.random() * 360));
 	};
@@ -55,14 +58,22 @@ function App() {
 			setMousePos({ x: e.clientX, y: e.clientY });
 		}, 20);
 
+		const throttledScroll = throttle((e) => {
+			console.log(root.scrollTop);
+			setScroll(root.scrollTop);
+		}, 0);
+
 		window.addEventListener('resize', debouncedHandleResize);
 		window.addEventListener('mousemove', throttledHandleMouseMove);
 		window.addEventListener('mousedown', mouseClick);
+
+		root.addEventListener('scroll', throttledScroll);
 
 		return () => {
 			window.removeEventListener('resize', debouncedHandleResize);
 			window.removeEventListener('mousemove', throttledHandleMouseMove);
 			window.removeEventListener('mousedown', mouseClick);
+			root.removeEventListener('scroll', throttledScroll);
 		};
 	}, []);
 
@@ -73,26 +84,31 @@ function App() {
 		const desiredWidth = Math.floor(Math.sqrt(width + 100) * 4);
 		const squareWidthIncludingMargin = desiredWidth + (width % desiredWidth) / Math.floor(width / desiredWidth) - 0.1;
 		const numOfSquaresInARow = Math.round(width / squareWidthIncludingMargin);
-		const numOfSquares = numOfSquaresInARow * Math.ceil(height / squareWidthIncludingMargin);
-
+		const numOfRows = Math.ceil(height / squareWidthIncludingMargin);
 		const squareWidthToMarginRatio = 0.85;
-		return Array.from({ length: numOfSquares }).map((_, i) => (
-			<div
-				className="square"
-				key={i}
-				style={{
-					width: `${squareWidthIncludingMargin * squareWidthToMarginRatio}px`,
-					margin: `${(squareWidthIncludingMargin * (1 - squareWidthToMarginRatio)) / 2}px`,
-				}}
-			></div>
-		));
+		return Array.from({ length: numOfRows }).map((_, i) => {
+			return (
+				<div className="row" key={i}>
+					{Array.from({ length: numOfSquaresInARow }).map((_, j) => (
+						<div
+							className="square"
+							key={j}
+							style={{
+								width: `${squareWidthIncludingMargin * squareWidthToMarginRatio}px`,
+								margin: `${(squareWidthIncludingMargin * (1 - squareWidthToMarginRatio)) / 2}px`,
+							}}
+						></div>
+					))}
+				</div>
+			);
+		});
 	};
 
-	const getParallaxTransform = (amount: number) => {
+	const getParallaxTransform = (amount: number, isSquare = false) => {
 		const dx = mousePos.x - window.innerWidth / 2;
-		const dy = mousePos.y - window.innerHeight / 2;
+		const dy = mousePos.y + scroll - window.innerHeight / 2;
 		const px = (dx / 1000) * amount;
-		const py = (dy / 1000) * amount;
+		const py = (dy / 1000) * amount + (isSquare ? scroll * 0.8 : 0);
 		// const rx = (mousePos.x * 2 / window.innerWidth - 1) * amount / 200;
 		// const ry = -(mousePos.y * 2 / window.innerHeight - 1) * amount / 200;
 		return `translateX(${px}px) translateY(${py}px)`; // rotateX(${ry}deg) rotateY(${rx}deg)`
@@ -101,7 +117,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<div id="background" style={{ transform: getParallaxTransform(10) }}>
+			<div id="background" style={{ transform: getParallaxTransform(10, true) }}>
 				{getBackgroundSquares()}
 			</div>
 			<div id="titleContainer">
@@ -110,6 +126,7 @@ function App() {
 				<h1 style={{ transform: getParallaxTransform(150) }}>mirusz</h1>
 				<h1 style={{ transform: getParallaxTransform(170) }}>mirusz</h1>
 			</div>
+			<Content />
 		</>
 	);
 }

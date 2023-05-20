@@ -1,24 +1,24 @@
 :root {
-  color-scheme: dark;
-  /* text-rendering: optimizeLegibility; */
-  --primary: #ffaa00;
-  --secondary: #9c6101;
-  --darkBackgroundColFilter: brightness(10%);
-  --primaryHue: 40;
-  --primary: hsl(var(--primaryHue), 100%, 50%);
+	color-scheme: dark;
+	/* text-rendering: optimizeLegibility; */
+	--primary: #ffaa00;
+	--secondary: #9c6101;
+	--darkBackgroundColFilter: brightness(10%);
+	--primaryHue: 40;
+	--primary: hsl(var(--primaryHue), 100%, 50%);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 #root {
-  z-index: 0;
-  background-color: #202020;
-  width: 100vw;
-  height: 100vh;
-  perspective: 5px;
-  overflow: hidden;
+	background-color: #202020;
+	width: 100vw;
+	height: 100vh;
+	perspective: 5px;
+	overflow-x: hidden;
+  overflow-y: scroll;
 }

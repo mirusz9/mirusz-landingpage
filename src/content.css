@@ -1,0 +1,8 @@
+main {
+	position: fixed;
+	top: 90vh;
+	left: 0;
+	right: 0;
+	height: 1000px;
+	background-color: #333;
+}

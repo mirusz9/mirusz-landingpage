@@ -1,11 +1,21 @@
 #background {
 	/* border: 1px solid orange; */
-	z-index: 1;
+	z-index: -2;
 	position: fixed;
 	top: 0px;
 	left: 0px;
+	right: 0px;
+	bottom: 0px;
 	font-size: 0;
 	padding: 10px;
+	overflow: hidden;
+	/* transition: transform 0.1s cubic-bezier(0,-0.01,.38,.7); */
+}
+
+.row {
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
 }
 
 .square {
@@ -20,7 +30,7 @@
 
 #titleContainer {
 	position: fixed;
-	z-index: 2;
+	z-index: -1;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -29,7 +39,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    background: radial-gradient(farthest-corner, hsla(var(--primaryHue), 50%, 5%, .1) 0%, #20202019 50%, #00000066 100%);
+	background: radial-gradient(farthest-corner, hsla(var(--primaryHue), 50%, 5%, 0.1) 0%, #20202019 50%, #00000066 100%);
 }
 
 h1 {

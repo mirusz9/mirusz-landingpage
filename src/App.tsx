@@ -58,7 +58,7 @@ function App() {
 			setMousePos({ x: e.clientX, y: e.clientY });
 		}, 20);
 
-		const throttledScroll = throttle((e) => {
+		const throttledScroll = throttle(() => {
 			console.log(root.scrollTop);
 			setScroll(root.scrollTop);
 		}, 0);

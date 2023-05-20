@@ -11,7 +11,6 @@ const app = express();
 // const PORT = +(process?.env.PORT || 3000);
 const PORT = 3000;
 app.use(helmet({ contentSecurityPolicy: false }));
-app.use(express.static(buildFolderPath));
 app.get('/', (req, res) => {
     // const IP = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
     // console.log(`Request from ip: ${IP}`);
@@ -33,8 +32,9 @@ app.get('/', (req, res) => {
     console.log(req.connection.remoteAddress);
     console.log(req.socket.remoteAddress);
     console.log("\n------------\n");
-    res.sendFile(path.join(buildFolderPath, 'entry.html'));
+    res.sendFile(path.join(buildFolderPath, 'index.html'));
 });
+app.use(express.static(buildFolderPath));
 app.use((req, res, next) => {
     // res.status(404);
     // const error = new Error(`🔍 - Not Found - ${req.originalUrl}`);

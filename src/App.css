@@ -1,7 +1,7 @@
 #background {
 	/* border: 1px solid orange; */
 	z-index: -2;
-	position: fixed;
+	position: relative;
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -10,6 +10,7 @@
 	padding: 10px;
 	overflow: hidden;
 	/* transition: transform 0.1s cubic-bezier(0,-0.01,.38,.7); */
+	/* transition: transform 0s linear; */
 }
 
 .row {
@@ -26,6 +27,8 @@
 	/* box-shadow: #1a1a1a 6px 6px 10px -5px inset, #2a2a2a -4px -4px 10px -5px inset; */
 	box-shadow: #111 5px 5px 5px -5px inset, #1a1a1a 10px 10px 10px -5px inset, #2a2a2a -5px -5px 5px -5px inset,
 		#222 -10px -10px 10px -5px inset;
+	/* transition: transform 0.1s cubic-bezier(0, -0.01, 0.38, 0.7); */
+	/* transition: transform 0.1s linear; */
 }
 
 #titleContainer {
@@ -51,7 +54,7 @@ h1 {
 	font-weight: 700;
 	font-family: 'Fugaz One', cursive;
 	user-select: none;
-	transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: transform 0.5s cubic-bezier(.2,.84,.67,.97);
 	/* font-family: 'Lemon', cursive; */
 	text-shadow: 0 0 10px#1a1a1aaa, 0 0 3px #111;
 }

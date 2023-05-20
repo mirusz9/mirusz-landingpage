@@ -59,7 +59,6 @@ function App() {
 		}, 20);
 
 		const throttledScroll = throttle(() => {
-			console.log(root.scrollTop);
 			setScroll(root.scrollTop);
 		}, 0);
 
@@ -76,6 +75,16 @@ function App() {
 			root.removeEventListener('scroll', throttledScroll);
 		};
 	}, []);
+
+	const getParallaxTransform = (amount: number) => {
+		const dx = mousePos.x - window.innerWidth / 2;
+		const dy = mousePos.y + scroll - window.innerHeight / 2;
+		const px = (dx / 1000) * amount;
+		const py = (dy / 1000) * amount;
+		// const rx = (mousePos.x * 2 / window.innerWidth - 1) * amount / 200;
+		// const ry = -(mousePos.y * 2 / window.innerHeight - 1) * amount / 200;
+		return `translateX(${px}px) translateY(${py}px)`; // rotateX(${ry}deg) rotateY(${rx}deg)`
+	};
 
 	const getBackgroundSquares = () => {
 		// -20 is neccessary to account for margin
@@ -96,6 +105,7 @@ function App() {
 							style={{
 								width: `${squareWidthIncludingMargin * squareWidthToMarginRatio}px`,
 								margin: `${(squareWidthIncludingMargin * (1 - squareWidthToMarginRatio)) / 2}px`,
+								transform: getParallaxTransform(10),
 							}}
 						></div>
 					))}
@@ -104,20 +114,14 @@ function App() {
 		});
 	};
 
-	const getParallaxTransform = (amount: number, isSquare = false) => {
-		const dx = mousePos.x - window.innerWidth / 2;
-		const dy = mousePos.y + scroll - window.innerHeight / 2;
-		const px = (dx / 1000) * amount;
-		const py = (dy / 1000) * amount + (isSquare ? scroll * 0.8 : 0);
-		// const rx = (mousePos.x * 2 / window.innerWidth - 1) * amount / 200;
-		// const ry = -(mousePos.y * 2 / window.innerHeight - 1) * amount / 200;
-		return `translateX(${px}px) translateY(${py}px)`; // rotateX(${ry}deg) rotateY(${rx}deg)`
+	const getScrollTransform = () => {
+		const py = scroll * 0.8;
+		return `translateY(${py}px)`;
 	};
 
 	return (
 		<>
-			<Header />
-			<div id="background" style={{ transform: getParallaxTransform(10, true) }}>
+			<div id="background" style={{ top: scroll * .8 }}>
 				{getBackgroundSquares()}
 			</div>
 			<div id="titleContainer">
@@ -126,6 +130,7 @@ function App() {
 				<h1 style={{ transform: getParallaxTransform(150) }}>mirusz</h1>
 				<h1 style={{ transform: getParallaxTransform(170) }}>mirusz</h1>
 			</div>
+			<Header />
 			<Content />
 		</>
 	);

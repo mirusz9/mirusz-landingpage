@@ -1,5 +1,8 @@
 header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 3;
 	background-color: #cccccc22;
 	backdrop-filter: blur(5px);

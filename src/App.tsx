@@ -135,7 +135,7 @@ function App() {
 				<h1 style={{ transform: getMouseAndDepthTransform(7.5) }}>mirusz</h1>
 			</div>
 			<Header />
-			<Content />
+			<Content scroll={scroll} />
 		</>
 	);
 }

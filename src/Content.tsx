@@ -1,11 +1,42 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './content.css';
 
 const root = document.getElementById('root')!;
-function Content() {
+
+interface IContentProps {
+	scroll: number;
+}
+
+function Content({ scroll }: IContentProps) {
 	const rightContentRef = useRef<HTMLDivElement>(null);
 	const leftContentRef = useRef<HTMLDivElement>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
+
+	useEffect(() => {
+		const rightNode = rightContentRef.current;
+		const leftNode = leftContentRef.current;
+		if (!rightNode || !leftNode) return;
+
+		const sections = rightNode.querySelectorAll('section');
+
+		for (let i = 0; i < sections.length; i++) {
+			const section = sections[i];
+			const rect = section.getBoundingClientRect();
+			const middle = rect.top + rect.height / 2 + root.scrollTop - 55;
+			if (scroll < middle) {
+				if (i == activeIndex) return;
+
+				const buttons = leftNode.querySelectorAll('button');
+
+				setActiveIndex((prev) => {
+					buttons[prev].classList.remove('active');
+					buttons[i].classList.add('active');
+					return i;
+				});
+				break;
+			}
+		}
+	}, [scroll, activeIndex]);
 
 	const scrollToIndex = (e: React.MouseEvent, index: number) => {
 		e.preventDefault();
@@ -14,7 +45,7 @@ function Content() {
 		const leftNode = leftContentRef.current;
 
 		if (!rightNode || !leftNode) return;
-		
+
 		const sectionNode = rightNode.querySelectorAll('section')[index];
 		const buttons = leftNode.querySelectorAll('button');
 
@@ -38,7 +69,9 @@ function Content() {
 					<div className="header">
 						<h5>mirusz9.com</h5>
 					</div>
-					<button onClick={(e) => scrollToIndex(e, 0)}>About Me</button>
+					<button onClick={(e) => scrollToIndex(e, 0)} className="active">
+						About Me
+					</button>
 					<button onClick={(e) => scrollToIndex(e, 1)}>Projects</button>
 					<button onClick={(e) => scrollToIndex(e, 2)}>Github</button>
 					<button onClick={(e) => scrollToIndex(e, 3)}>Contact</button>
@@ -107,6 +140,16 @@ function Content() {
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam ab illum dolore ullam nostrum
 							aliquam totam maxime esse autem cupiditate optio exercitationem asperiores neque suscipit repudiandae voluptatem
 							omnis nihil.
+							<br />
+							<br />
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis aliquam, aut porro optio voluptatum
+							beatae reiciendis necessitatibus modi quae ea? Eius quaerat atque soluta rerum saepe voluptatibus perspiciatis
+							optio.
+							<br />
+							<br />
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis aliquam, aut porro optio voluptatum
+							beatae reiciendis necessitatibus modi quae ea? Eius quaerat atque soluta rerum saepe voluptatibus perspiciatis
+							optio.
 						</p>
 					</section>
 				</div>

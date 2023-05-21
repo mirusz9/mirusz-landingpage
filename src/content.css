@@ -63,7 +63,7 @@ main {
 	padding: 5px 0 5px 15px;
 	border-left: 2px solid #333;
 	cursor: pointer;
-	transition: color 0.3s, border 0.3s;
+	transition: color 0.2s, border 0.2s;
 }
 
 #leftContent > button:hover {

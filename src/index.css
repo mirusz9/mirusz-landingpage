@@ -9,13 +9,19 @@
 	--mainBackgroundCol: hsl(var(--primaryHue), 5%, 7%);
 	--mainBackgroundColTransparent: hsla(var(--primaryHue), 5%, 50%, 0.1);
 	--header: hsl(var(--primaryHue), 100%, 70%);
-  --secondary: hsl(var(--primaryHue), 5%, 10%)
+	--secondary: hsl(var(--primaryHue), 5%, 10%);
+	--highlight: hsla(calc(var(--primaryHue) + 180), 100%, 70%, .5);
+	--separatorBorder: 1px solid #333;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+::selection {
+	background-color: var(--highlight);
 }
 
 #root {
@@ -26,4 +32,5 @@
 	perspective: 5px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	scroll-behavior: smooth;
 }

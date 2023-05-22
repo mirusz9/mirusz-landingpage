@@ -61,11 +61,11 @@ function App() {
 			if (isBackgroundVisible) {
 				setMousePos({ x: e.clientX, y: e.clientY });
 			}
-		}, 20);
+		}, 16);
 
-		const throttledScroll = throttle(() => {
+		const throttledScroll = () => {
 			setScroll(root.scrollTop);
-		}, 0);
+		};
 
 		window.addEventListener('resize', debouncedHandleResize);
 		window.addEventListener('mousemove', throttledHandleMouseMove);

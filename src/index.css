@@ -5,7 +5,8 @@
 	--secondary: #9c6101;
 	--darkBackgroundColFilter: brightness(10%);
 	--primaryHue: 40;
-	--primary: hsl(var(--primaryHue), 90%, 40%);
+	/* --primary: hsl(var(--primaryHue), 90%, 40%); */
+	--primary: hsl(var(--primaryHue), 100%, 60%);
 	--mainBackgroundCol: hsl(var(--primaryHue), 5%, 7%);
 	--mainBackgroundColTransparent: hsla(var(--primaryHue), 5%, 50%, 0.1);
 	--header: hsl(var(--primaryHue), 100%, 70%);
@@ -32,5 +33,5 @@
 	perspective: 5px;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 }

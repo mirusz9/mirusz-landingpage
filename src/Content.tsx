@@ -73,8 +73,28 @@ function Content({ scroll }: IContentProps) {
 						About Me
 					</button>
 					<button onClick={(e) => scrollToIndex(e, 1)}>Projects</button>
-					<button onClick={(e) => scrollToIndex(e, 2)}>Github</button>
-					<button onClick={(e) => scrollToIndex(e, 3)}>Contact</button>
+					<button onClick={(e) => scrollToIndex(e, 2)} className="secondary">
+						Schedule Planner
+					</button>
+					<button onClick={(e) => scrollToIndex(e, 3)} className="secondary">
+						Virus Simulation
+					</button>
+					<button onClick={(e) => scrollToIndex(e, 4)} className="secondary">
+						HiMCM
+					</button>
+					<button onClick={(e) => scrollToIndex(e, 5)} className="secondary">
+						Videki Law
+					</button>
+					<button onClick={(e) => scrollToIndex(e, 6)} className="secondary">
+						Rope Simulation
+					</button>
+					<button onClick={(e) => scrollToIndex(e, 7)} className="secondary">
+						FABRIK
+					</button>
+					<button onClick={(e) => scrollToIndex(e, 8)} className="secondary">
+						2D Game
+					</button>
+					<button onClick={(e) => scrollToIndex(e, 9)}>Contact</button>
 				</div>
 			</div>
 			<div id="right">
@@ -85,18 +105,24 @@ function Content({ scroll }: IContentProps) {
 					<section id="about-me">
 						<h2>About Me</h2>
 						<p>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam ab illum dolore ullam nostrum
-							aliquam totam maxime esse autem cupiditate optio exercitationem asperiores neque suscipit repudiandae voluptatem
-							omnis nihil.
+							Hi, I am <span className="monospace">mirusz9</span>.
+						</p>
+						<p>
+							I've been making stuff for fun since 2017, when I learned how to code. If you want to check out my projects, you
+							can take a look at them below.
 						</p>
 					</section>
 					<section id="projects">
 						<h2>Projects</h2>
 						<p>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam ab illum dolore ullam nostrum
-							aliquam totam maxime esse autem cupiditate optio exercitationem asperiores neque suscipit repudiandae voluptatem
-							omnis nihil.
-							<br />
+							Here are the highlights of my many coding projects. Note that all of these (and many more projects that I did
+							not include on this website) are available on my{' '}
+							<a href="https://github.com/mirusz9" target="_blank">
+								GitHub
+							</a>
+							.
+						</p>
+						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ullam quam quis in rerum autem a illo obcaecati,
 							blanditiis voluptatum doloremque provident deleniti repellat nostrum ea hic modi odit ipsum! Lorem ipsum dolor
 							sit amet consectetur, adipisicing elit. Nesciunt officiis perspiciatis ut fuga molestias voluptatibus quae amet

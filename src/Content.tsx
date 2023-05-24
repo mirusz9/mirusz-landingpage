@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
-import img from './assets/scheduleplanner.png';
+import schedulePlannerImg from './assets/scheduleplanner.png';
+import virusSimulationImg from './assets/virussimulation.png';
 import './content.css';
 
 const root = document.getElementById('root')!;
@@ -127,7 +128,7 @@ function Content({ scroll }: IContentProps) {
 					<section className="secondary">
 						<div>
 							<h2>Schedule Planner</h2>
-							<span className='date'># 12/02/2022</span>
+							<span className="date"># 12/02/2022</span>
 						</div>
 						<p>
 							A{' '}
@@ -144,11 +145,40 @@ function Content({ scroll }: IContentProps) {
 							prerequisites for any given course.
 						</p>
 						<a href="https://ashschedule.mirusz9.com" target="_blank" className="image">
-							<img src={img} alt="Schedule Planner"></img>
+							<img src={schedulePlannerImg} alt="Schedule Planner"></img>
 						</a>
 						<p>
 							This was one of the biggest projects I've ever worked on, taking up half a year and over a hundred hours of
 							work. Because of this, I keep the source code private. <span className="small">I'm sorry :(</span>
+						</p>
+					</section>
+					<section className="secondary">
+						<div>
+							<h2>Virus Simulation</h2>
+							<span className="date"># 04/06/2020</span>
+						</div>
+						<p>
+							A highly customizable simulation that models and visualizes the spread of a virus. The{' '}
+							<a href="https://github.com/mirusz9/Virus-Simulation" target="_blank">
+								source code
+							</a>{' '}
+							is available on my GitHub.
+						</p>
+						<a href="https://github.com/mirusz9/Virus-Simulation" target="_blank" className="image">
+							<img src={virusSimulationImg} alt="Virus Simulation"></img>
+						</a>
+						<p>
+							This project was inspired by{' '}
+							<a href="https://www.youtube.com/watch?v=gxAaO2rsdIs" target="_blank">
+								3Blue1Brown's video
+							</a>{' '}
+							on YouTube. It is based on an SIR model that can be customized with many settings such as the rate of spread of
+							the virus, the percentage of the population following social distancing rules, or the duration for which a cell
+							is infectious.
+						</p>
+						<p>
+							If you'd like to try the simulation out, the installation and the settings are well documented on the GitHub
+							page in <span className="monospace">README.md</span>.
 						</p>
 					</section>
 					<section id="contact">

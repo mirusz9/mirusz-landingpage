@@ -186,6 +186,13 @@ span.date {
 	font-weight: 700;
 	font-size: 25px;
 	color: #555;
+	border-radius: 10px;
+	padding: 5px 10px;
+	transition: background-color .2s;
+}
+
+span.date:hover {
+	background-color: var(--mainBackgroundCol);
 }
 
 section.secondary > div > h2 {

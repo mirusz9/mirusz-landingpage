@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+import img from './assets/scheduleplanner.png';
 import './content.css';
 
 const root = document.getElementById('root')!;
@@ -102,7 +103,7 @@ function Content({ scroll }: IContentProps) {
 					<div className="header">
 						<h5>Idk what goes here yet</h5>
 					</div>
-					<section id="about-me">
+					<section>
 						<h2>About Me</h2>
 						<p>
 							Hi, I am <span className="monospace">mirusz9</span>.
@@ -112,7 +113,7 @@ function Content({ scroll }: IContentProps) {
 							can take a look at them below.
 						</p>
 					</section>
-					<section id="projects">
+					<section>
 						<h2>Projects</h2>
 						<p>
 							Here are the highlights of my many coding projects. Note that all of these (and many more projects that I did
@@ -122,42 +123,32 @@ function Content({ scroll }: IContentProps) {
 							</a>
 							.
 						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ullam quam quis in rerum autem a illo obcaecati,
-							blanditiis voluptatum doloremque provident deleniti repellat nostrum ea hic modi odit ipsum! Lorem ipsum dolor
-							sit amet consectetur, adipisicing elit. Nesciunt officiis perspiciatis ut fuga molestias voluptatibus quae amet
-							sed non odio cupiditate obcaecati, sapiente porro dolores dolorum. Eveniet quia recusandae dicta.
-						</p>
 					</section>
-					<section id="github">
-						<h2>GitHub</h2>
+					<section className="secondary">
+						<div>
+							<h2>Schedule Planner</h2>
+							<span className='date'># 12/02/2022</span>
+						</div>
 						<p>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam ab illum dolore ullam nostrum
-							aliquam totam maxime esse autem cupiditate optio exercitationem asperiores neque suscipit repudiandae voluptatem
-							omnis nihil.
-							<br />
-							<br />
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, iusto tempora quibusdam reprehenderit ipsa
-							quas tempore repellendus nisi officiis molestiae ea odio, explicabo obcaecati libero saepe voluptas harum at
-							velit voluptatem aut, nesciunt nulla! Officiis sequi sunt eligendi unde delectus ex doloribus repudiandae culpa
-							dolor quas provident maiores reiciendis consequuntur asperiores qui repellat perspiciatis, minima quis. Eveniet
-							sint eos exercitationem repudiandae facilis sit tenetur sequi quis ipsa amet quae a quasi, cumque reiciendis
-							assumenda quisquam inventore sunt doloribus error. Earum illo inventore architecto, molestiae sunt autem dolorem
-							eveniet fugiat nostrum, quis praesentium natus. Pariatur assumenda nihil repudiandae maiores eaque iure? Quae
-							magni suscipit, eos impedit deleniti non, voluptatibus ducimus rerum ea aspernatur consectetur error quaerat.
-							Numquam consequatur vel porro, saepe illo ab illum minima rerum sed amet hic perspiciatis minus impedit labore
-							quos iure praesentium. Architecto quibusdam fuga in nostrum laudantium delectus nesciunt impedit quas, nulla
-							animi harum, deserunt aliquam possimus ullam eveniet praesentium aperiam odio incidunt fugiat temporibus, quod
-							dolor autem consequatur consequuntur? Culpa quae id facere nobis vero at, sed cupiditate nostrum necessitatibus
-							veritatis odit esse itaque iusto ipsam neque omnis aliquam repudiandae ex quia ab eligendi sint! Commodi sit
-							facilis illum animi accusantium natus quia sequi, neque deserunt quidem nam dolores nemo, quisquam voluptates
-							magni! Neque quaerat doloribus at atque sed accusantium, culpa tenetur, doloremque veritatis quas veniam. Dicta
-							tempora aliquid nulla autem laudantium, porro, quisquam qui numquam quas earum provident modi rerum pariatur
-							ipsum beatae corporis maxime aut dignissimos. Voluptate suscipit blanditiis veniam molestias quas eaque magnam
-							earum? Dignissimos voluptates, fuga officia deleniti nesciunt quasi hic? Suscipit voluptatum porro magnam rem,
-							perspiciatis iure officia hic dolorem atque delectus, omnis architecto corrupti, veritatis quae consequatur?
-							Esse ducimus veniam possimus ipsum dolores at, aliquid numquam repudiandae. Dicta iusto enim perferendis a,
-							quibusdam explicabo nisi animi sint porro.
+							A{' '}
+							<a href="https://ashschedule.mirusz9.com" target="_blank">
+								Schedule Builder
+							</a>{' '}
+							tool for my high school.
+						</p>
+						<p>
+							Understanding the IB and AP systems was a real challenge for me as our family had no previous experience with
+							these programs. We had to figure out all the requirements from a 100-page document. As this process was
+							overwhelming for many students, I came up with the idea to create a schedule planner for my school. This website
+							aimed to explain how the AP, IB, and credit systems work, what classes one needs to graduate, and the
+							prerequisites for any given course.
+						</p>
+						<a href="https://ashschedule.mirusz9.com" target="_blank" className="image">
+							<img src={img} alt="Schedule Planner"></img>
+						</a>
+						<p>
+							This was one of the biggest projects I've ever worked on, taking up half a year and over a hundred hours of
+							work. Because of this, I keep the source code private. <span className="small">I'm sorry :(</span>
 						</p>
 					</section>
 					<section id="contact">

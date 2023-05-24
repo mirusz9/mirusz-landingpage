@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import schedulePlannerImg from './assets/scheduleplanner.png';
 import virusSimulationImg from './assets/virussimulation.png';
+import himcmImg from './assets/himcm.png';
 import './content.css';
 
 const root = document.getElementById('root')!;
@@ -177,9 +178,39 @@ function Content({ scroll }: IContentProps) {
 							is infectious.
 						</p>
 						<p>
-							If you'd like to try the simulation out, the installation and the settings are well documented on the GitHub
+							If you'd like to try the simulation out, the installation and the settings are well-documented on the GitHub
 							page in <span className="monospace">README.md</span>.
 						</p>
+					</section>
+					<section className="secondary">
+						<div>
+							<h2>HiMCM</h2>
+							<span className="date"># 14/11/2022</span>
+						</div>
+						<p>
+							<a
+								href="https://www.contest.comap.com/highschool/contests/himcm/2022_Problems/2022_HiMCM_Problem_A.pdf"
+								target="_blank"
+							>
+								2022 Problem A
+							</a>
+							: The Need for Bees (and not just for honey)
+						</p>
+						<p>
+							Me and three of my classmates partnered up to compete in the High School Mathematical Contest in Modeling, where
+							we had to create a model that reflects the population size of a bee colony over time. The twenty-four page paper we wrote earned Honorable Mention.  
+						</p>
+						<a href="https://himcm.mirusz9.com" target="_blank" className="image">
+							<img src={himcmImg} alt="HiMCM"></img>
+						</a>
+						<p>
+							You can try the simulation{' '}
+							<a href="https://himcm.mirusz9.com" target="_blank">
+								here
+							</a>{' '}
+							
+						</p>
+			
 					</section>
 					<section id="contact">
 						<h2>Contact</h2>

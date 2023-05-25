@@ -60,7 +60,7 @@ function App() {
 	const [scroll, setScroll] = useState(0);
 
 	document.documentElement.style.setProperty('--primaryHue', hue.toString());
-	metaThemeColor.setAttribute('content', `hsl(${hue}, 20%, 5%)`);
+	metaThemeColor.setAttribute('content', `hsl(${hue}, 5%, 10%)`);
 
 	const isBackgroundVisible = scroll / dimensions.height < 0.9;
 

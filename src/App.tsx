@@ -31,7 +31,6 @@ function throttle<T>(fn: (e: T) => void, ms: number) {
 	};
 }
 
-const root = document.querySelector('body')!;
 const metaThemeColor = document.getElementById("meta-theme-color")!
 function App() {
 	const [dimensions, setDimensions] = useState({
@@ -66,20 +65,19 @@ function App() {
 		}, 16);
 
 		const throttledScroll = () => {
-			setScroll(root.scrollTop);
+			setScroll(document.documentElement.scrollTop);
 		};
 
 		window.addEventListener('resize', debouncedHandleResize);
 		window.addEventListener('mousemove', throttledHandleMouseMove);
 		window.addEventListener('mousedown', mouseClick);
-
-		root.addEventListener('scroll', throttledScroll);
+		window.addEventListener('scroll', throttledScroll);
 
 		return () => {
 			window.removeEventListener('resize', debouncedHandleResize);
 			window.removeEventListener('mousemove', throttledHandleMouseMove);
 			window.removeEventListener('mousedown', mouseClick);
-			root.removeEventListener('scroll', throttledScroll);
+			window.removeEventListener('scroll', throttledScroll);
 		};
 	}, [isBackgroundVisible]);
 

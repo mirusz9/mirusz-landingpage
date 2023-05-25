@@ -14,7 +14,7 @@
 	--highlight: hsla(calc(var(--primaryHue) + 180), 100%, 70%, .5);
 	--separatorBorder: 1px solid #333;
 
-	overflow: hidden;
+	/* overflow: hidden; */
 
 }
 
@@ -29,6 +29,8 @@
 }
 
 body {
+	/* width: 100dvw; */
+	/* height: 100dvh; */
 	overflow-x: hidden;
 	overflow-y: scroll;
 	background-color: hsl(var(--primaryHue), 20%, 5%);
@@ -37,9 +39,9 @@ body {
 
 #root {
 	/* background-color: #202020; */
-	width: 100vw;
-	height: 100vh;
-	perspective: 5px;
+	/* width: 100vw; */
+	/* height: 100vh; */
+	/* perspective: 5px; */
 	/* overflow-x: hidden; */
 	/* overflow-y: scroll; */
 	/* scroll-behavior: smooth; */

@@ -4,7 +4,6 @@ import virusSimulationImg from './assets/virussimulation.png';
 import himcmImg from './assets/himcm.png';
 import './content.css';
 
-const root = document.querySelector('body')!;
 
 interface IContentProps {
 	scroll: number;
@@ -25,7 +24,7 @@ function Content({ scroll }: IContentProps) {
 		for (let i = 0; i < sections.length; i++) {
 			const section = sections[i];
 			const rect = section.getBoundingClientRect();
-			const middle = rect.top + rect.height / 2 + root.scrollTop - 55;
+			const middle = rect.top + rect.height / 2 + document.documentElement.scrollTop - 55;
 			if (scroll < middle) {
 				if (i == activeIndex) return;
 
@@ -59,9 +58,9 @@ function Content({ scroll }: IContentProps) {
 		});
 
 		const top = sectionNode.getBoundingClientRect().top;
-		root.scrollTo({
+		window.scrollTo({
 			behavior: 'smooth',
-			top: top + root.scrollTop - 55,
+			top: top + document.documentElement.scrollTop - 55,
 		});
 	};
 
@@ -198,7 +197,8 @@ function Content({ scroll }: IContentProps) {
 						</p>
 						<p>
 							Me and three of my classmates partnered up to compete in the High School Mathematical Contest in Modeling, where
-							we had to create a model that reflects the population size of a bee colony over time. The twenty-four page paper we wrote earned Honorable Mention.  
+							we had to create a model that reflects the population size of a bee colony over time. The twenty-four page paper
+							we wrote earned Honorable Mention.
 						</p>
 						<a href="https://himcm.mirusz9.com" target="_blank" className="image">
 							<img src={himcmImg} alt="HiMCM"></img>
@@ -207,10 +207,9 @@ function Content({ scroll }: IContentProps) {
 							You can try the simulation{' '}
 							<a href="https://himcm.mirusz9.com" target="_blank">
 								here
-							</a>.
-							
+							</a>
+							.
 						</p>
-			
 					</section>
 					<section id="contact">
 						<h2>Contact</h2>

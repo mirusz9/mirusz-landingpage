@@ -31,7 +31,8 @@ function throttle<T>(fn: (e: T) => void, ms: number) {
 	};
 }
 
-const root = document.getElementById('root')!;
+const root = document.querySelector('body')!;
+const metaThemeColor = document.getElementById("meta-theme-color")!
 function App() {
 	const [dimensions, setDimensions] = useState({
 		height: window.innerHeight,
@@ -42,6 +43,7 @@ function App() {
 	const [scroll, setScroll] = useState(0);
 
 	document.documentElement.style.setProperty('--primaryHue', hue.toString());
+	metaThemeColor.setAttribute("content", `hsl(${hue}, 20%, 5%)`)
 
 	const isBackgroundVisible = scroll / dimensions.height < 0.9;
 
@@ -128,13 +130,13 @@ function App() {
 			<div id="background" style={{ transform: getMouseAndDepthTransform(2) }}>
 				{getBackgroundSquares()}
 			</div>
+			<Header />
 			<div id="titleContainer">
 				<h1 style={{ transform: getMouseAndDepthTransform(6) }}>mirusz</h1>
 				<h1 style={{ transform: getMouseAndDepthTransform(6.5) }}>mirusz</h1>
 				<h1 style={{ transform: getMouseAndDepthTransform(7) }}>mirusz</h1>
 				<h1 style={{ transform: getMouseAndDepthTransform(7.5) }}>mirusz</h1>
 			</div>
-			<Header />
 			<Content scroll={scroll} />
 		</>
 	);

@@ -4,7 +4,7 @@ import virusSimulationImg from './assets/virussimulation.png';
 import himcmImg from './assets/himcm.png';
 import './content.css';
 
-const root = document.getElementById('root')!;
+const root = document.querySelector('body')!;
 
 interface IContentProps {
 	scroll: number;

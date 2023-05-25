@@ -6,7 +6,7 @@
 	left: 0px;
 	right: 0px;
 	/* bottom: 10vh; */
-	height: 90dvh;
+	height: 90svh;
 	font-size: 0;
 	padding: 10px;
 	overflow: hidden;
@@ -45,7 +45,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: calc(90dvh - 74px);
+	height: calc(90svh - 74px);
 	background: radial-gradient(farthest-corner, hsla(var(--primaryHue), 50%, 5%, 0.1) 0%, #20202019 50%, #00000066 100%);
 }
 

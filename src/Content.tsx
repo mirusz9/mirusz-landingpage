@@ -207,7 +207,7 @@ function Content({ scroll }: IContentProps) {
 							You can try the simulation{' '}
 							<a href="https://himcm.mirusz9.com" target="_blank">
 								here
-							</a>{' '}
+							</a>.
 							
 						</p>
 			

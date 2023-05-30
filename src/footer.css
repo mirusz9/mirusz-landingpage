@@ -1,0 +1,8 @@
+footer {
+	/* border-top: 2px solid var(--secondary); */
+	text-align: center;
+	padding: 60px 30px;
+	/* margin: 30px 30px; */
+	font-family: 'Nunito Sans', sans-serif;
+	color: #777;
+}

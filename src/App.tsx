@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Content from './Content';
 import { checkIsMobile, debounce, throttle } from './utils';
+import Footer from './Footer';
 
 const metaThemeColor = document.getElementById('meta-theme-color');
 function App() {
@@ -112,6 +113,7 @@ function App() {
 				<h1 style={{ transform: getMouseAndDepthTransform(7.5) }}>mirusz</h1>
 			</div>
 			<Content scroll={scroll} />
+			<Footer />
 		</>
 	);
 }

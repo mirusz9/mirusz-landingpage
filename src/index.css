@@ -38,7 +38,7 @@ body {
 	background-color: var(--mainBackgroundCol);
 }
 
-#root {
+/* #root { */
 	/* background-color: #202020; */
 	/* width: 100vw; */
 	/* height: 100vh; */
@@ -46,4 +46,4 @@ body {
 	/* overflow-x: hidden; */
 	/* overflow-y: scroll; */
 	/* scroll-behavior: smooth; */
-}
+/* } */

@@ -25,7 +25,7 @@
 	display: inline-block;
 	aspect-ratio: 1 / 1;
 	/* background-color: #1f1f1f; */
-	background-color: hsl(var(--primaryHue), 20%, 4%);
+	background-color: hsl(var(--primaryHue), 5%, 5.7%);
 	border-radius: 20px;
 	/* box-shadow: #1a1a1a 6px 6px 10px -5px inset, #2a2a2a -4px -4px 10px -5px inset; */
 	box-shadow: hsla(var(--primaryHue), 10%, 1%, .7) 5px 5px 5px -5px inset, hsla(var(--primaryHue), 20%, 2%, .7) 10px 10px 10px -5px inset,

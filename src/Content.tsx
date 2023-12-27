@@ -6,6 +6,10 @@ import vlawImg from './assets/vlaw.png';
 import ropesimImg from './assets/rope-sim.png';
 import fabrikImg from './assets/fabrik.png';
 import gameImg from './assets/2dgame.png';
+import { FaSquareInstagram } from 'react-icons/fa6';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+import { FaGithubSquare } from 'react-icons/fa';
+import { FaSpotify } from 'react-icons/fa';
 import './content.css';
 
 interface IContentProps {
@@ -318,11 +322,29 @@ function Content({ scroll }: IContentProps) {
 								If you'd like to contact me my username is <span className="monospace">mirusz9</span> on every single
 								platform. <br /> I've included a few links for you:
 							</p>
-							<ul>
+							<ul id="contactList">
 								<li>
-									<a href="" target="_blank">
-										<img></img>
+									<a href="https://www.instagram.com/mirusz9/" target="_blank">
+										<FaSquareInstagram size="25px" />
 										<span>Instagram</span>
+									</a>
+								</li>
+								<li>
+									<a href="https://x.com/mirusz9" target="_blank">
+										<FaSquareXTwitter size="25px" />
+										<span>X</span>
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/mirusz9" target="_blank">
+										<FaGithubSquare size="25px" />
+										<span>GitHub</span>
+									</a>
+								</li>
+								<li>
+									<a href="https://open.spotify.com/user/mirusz9" target="_blank">
+										<FaSpotify size="25px" />
+										<span>Spotify</span>
 									</a>
 								</li>
 							</ul>

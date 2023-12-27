@@ -131,6 +131,25 @@ h5 {
 	font-size: 20px;
 }
 
+
+#randomizeButton {
+	background-color: var(--mainBackgroundCol);
+	border: none;
+	outline: none;
+	padding: 5px;
+	margin: 0px 10px;
+	/* color: var(--secondary);2 */
+	color: var(--header);
+	border-radius: 10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+#randomizeButton:hover {
+	color: #fff;
+}
+
 section {
 	/* margin: 0 120px; */
 	padding-bottom: 20px;
@@ -254,8 +273,6 @@ display: block;
 	color: var(--header);
 }
 
-#contactList span {
-}
 
 @media screen and (max-width: 1000px) {
 	#rightContentWrapper {

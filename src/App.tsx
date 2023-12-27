@@ -23,7 +23,7 @@ function App() {
 
 	const isBackgroundVisible = scroll / dimensions.height < 0.9;
 
-	const mouseClick = () => {
+	const randomizeCol = () => {
 		setHue(Math.floor(Math.random() * 360));
 	};
 
@@ -47,13 +47,11 @@ function App() {
 
 		window.addEventListener('resize', debouncedHandleResize);
 		window.addEventListener('mousemove', throttledHandleMouseMove);
-		window.addEventListener('mousedown', mouseClick);
 		window.addEventListener('scroll', throttledScroll);
 
 		return () => {
 			window.removeEventListener('resize', debouncedHandleResize);
 			window.removeEventListener('mousemove', throttledHandleMouseMove);
-			window.removeEventListener('mousedown', mouseClick);
 			window.removeEventListener('scroll', throttledScroll);
 		};
 	}, [isBackgroundVisible, isMobile]);
@@ -112,7 +110,7 @@ function App() {
 				<h1 style={{ transform: getMouseAndDepthTransform(7) }}>mirusz</h1>
 				<h1 style={{ transform: getMouseAndDepthTransform(7.5) }}>mirusz</h1>
 			</div>
-			<Content scroll={scroll} />
+			<Content scroll={scroll} randomizeCol={randomizeCol}/>
 			<Footer />
 		</>
 	);

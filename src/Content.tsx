@@ -10,13 +10,15 @@ import { FaSquareInstagram } from 'react-icons/fa6';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaGithubSquare } from 'react-icons/fa';
 import { FaSpotify } from 'react-icons/fa';
+import { FaDiceSix } from 'react-icons/fa';
 import './content.css';
 
 interface IContentProps {
 	scroll: number;
+	randomizeCol: () => void;
 }
 
-function Content({ scroll }: IContentProps) {
+function Content({ scroll, randomizeCol }: IContentProps) {
 	const rightContentRef = useRef<HTMLDivElement>(null);
 	const leftContentRef = useRef<HTMLDivElement>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -108,7 +110,10 @@ function Content({ scroll }: IContentProps) {
 			</div>
 			<div id="right">
 				<div className="header">
-					<h5>Idk what goes here yet</h5>
+					<h5>Try other colors: </h5>
+					<button onClick={randomizeCol} id="randomizeButton">
+						<FaDiceSix size="30px" />
+					</button>
 				</div>
 				<div id="rightContentWrapper">
 					<div id="rightContent" ref={rightContentRef}>

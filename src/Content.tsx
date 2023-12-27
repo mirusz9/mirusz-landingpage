@@ -2,6 +2,10 @@ import { useRef, useState, useEffect } from 'react';
 import schedulePlannerImg from './assets/scheduleplanner.png';
 import virusSimulationImg from './assets/virussimulation.png';
 import himcmImg from './assets/himcm.png';
+import vlawImg from './assets/vlaw.png';
+import ropesimImg from './assets/rope-sim.png';
+import fabrikImg from './assets/fabrik.png';
+import gameImg from './assets/2dgame.png';
 import './content.css';
 
 interface IContentProps {
@@ -87,13 +91,13 @@ function Content({ scroll }: IContentProps) {
 						Videki Law
 					</button>
 					<button onClick={(e) => scrollToIndex(e, 6)} className="secondary">
-						Rope Simulation
+						2D Game
 					</button>
 					<button onClick={(e) => scrollToIndex(e, 7)} className="secondary">
-						FABRIK
+						Rope Simulation
 					</button>
 					<button onClick={(e) => scrollToIndex(e, 8)} className="secondary">
-						2D Game
+						FABRIK
 					</button>
 					<button onClick={(e) => scrollToIndex(e, 9)}>Contact</button>
 				</div>
@@ -109,11 +113,15 @@ function Content({ scroll }: IContentProps) {
 								<h2>About Me</h2>
 							</div>
 							<p>
-								Hi, I am <span className="monospace">mirusz9</span>.
+								Hi, my name is Adam Sztano, a.k.a. <span className="monospace">mirusz9</span>.
 							</p>
 							<p>
-								I've been making stuff for fun since 2017, when I learned how to code. If you want to check out my projects,
-								you can take a look at them below.
+								I study Computer Science and Engineering at{' '}
+								<a href="https://tudelft.nl" target="_blank">
+									TU Delft
+								</a>
+								. I've been making stuff for fun since 2017, when I learned how to code. If you want to check out my
+								projects, you can take a look at them below.
 							</p>
 						</section>
 						<section>
@@ -215,25 +223,109 @@ function Content({ scroll }: IContentProps) {
 								.
 							</p>
 						</section>
+						<section className="secondary">
+							<div>
+								<h2>Videki Law</h2>
+								<span className="date"># 13/05/2021</span>
+							</div>
+							<p>
+								Videki Law is a management system for lawyers where the can keep track of their ongoing cases, clients and
+								documents
+							</p>
+							<a className="image">
+								<img src={vlawImg} alt="A screenshot of Videki Law" />
+							</a>
+							<p>
+								Sadly I can't include detailed screenshots as all the information is confidential, but I can proudly say
+								that this has been one of the biggest projects I've ever worked on.
+							</p>
+						</section>
+						<section className="secondary">
+							<div>
+								<h2>2D Game</h2>
+								<span className="date"># 09/06/2020</span>
+							</div>
+							<p>
+								I attempted to create a 2D sidescroller game, similar to Terraria <i>from scratch</i>. I was really drawn to
+								the idea of creating my own procedural world generation code, as I've always wondered how games like
+								Minecraft and Terraria generate their huge and diverse environments.
+							</p>
+							<p>
+								The map generator procedurally creates one large interconnected cave that tries to be as realistic as
+								possible. Everything was made from scratch: the textures, the physics and collision system, the rendering
+								engine and the map generation.
+							</p>
+							<a className="image" href="https://github.com/mirusz9/2d-game" target="_blank">
+								<img src={gameImg} alt="A screenshot of the game" />
+							</a>
+							<p>
+								I am really proud of this project, it has really improved my programming skills and gave me a really good
+								introduction to game development. Although the game is super unfinished, you can try it{' '}
+								<a href="https://github.com/mirusz9/2d-game" target="_blank">
+									here
+								</a>
+								.
+							</p>
+						</section>
+						<section className="secondary">
+							<div>
+								<h2>Rope Simulation</h2>
+								<span className="date"># 10/06/2022</span>
+							</div>
+							<p>
+								This is a fun project I worked on in my free time where I try to simulate rope and cloth-like materials by
+								connecting nodes with sticks and applying some basics physics to them. The end result is surprisingly
+								realistic.
+							</p>
+							<a className="image" href="https://github.com/mirusz9/rope-simulation" target="_blank">
+								<img src={ropesimImg} alt="A screenshot of the rope simulation" />
+							</a>
+							<p>
+								You can play with the simulation by downloading the two files from{' '}
+								<a href="https://github.com/mirusz9/rope-simulation" target="_blank">
+									here
+								</a>
+								. You can also build your own rope structure, I've included a very basic editor.
+							</p>
+						</section>
+						<section className="secondary">
+							<div>
+								<h2>FABRIK</h2>
+								<span className="date"># 09/06/2022</span>
+							</div>
+							<p>
+								I was interested in inverse kinematics, so I implemented FABRIK (Forward and backward reaching inverse
+								kinematics). This is a very simple fun app that demonstrates how inverse kinematics work.
+							</p>
+							<a className="image" href="https://github.com/mirusz9/FABRIK" target="_blank">
+								<img src={fabrikImg} alt="A screenshot of the inverse kinematics app" />
+							</a>
+							<p>
+								You can try the app{' '}
+								<a href="https://github.com/mirusz9/FABRIK" target="_blank">
+									here
+								</a>
+								. You're welcome to play around with the code and change some variables such as the number of nodes or the
+								stick length.
+							</p>
+						</section>
+
 						<section id="contact">
 							<div>
 								<h2>Contact</h2>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam ab illum dolore ullam nostrum
-								aliquam totam maxime esse autem cupiditate optio exercitationem asperiores neque suscipit repudiandae
-								voluptatem omnis nihil.
-								<br />
-								<br />
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis aliquam, aut porro optio voluptatum
-								beatae reiciendis necessitatibus modi quae ea? Eius quaerat atque soluta rerum saepe voluptatibus
-								perspiciatis optio.
-								<br />
-								<br />
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis aliquam, aut porro optio voluptatum
-								beatae reiciendis necessitatibus modi quae ea? Eius quaerat atque soluta rerum saepe voluptatibus
-								perspiciatis optio.
+								If you'd like to contact me my username is <span className="monospace">mirusz9</span> on every single
+								platform. <br /> I've included a few links for you:
 							</p>
+							<ul>
+								<li>
+									<a href="" target="_blank">
+										<img></img>
+										<span>Instagram</span>
+									</a>
+								</li>
+							</ul>
 						</section>
 					</div>
 				</div>

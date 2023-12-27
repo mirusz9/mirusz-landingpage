@@ -60,8 +60,8 @@ main {
 }
 
 /* #leftContent > .header { */
-	/* border-bottom: var(--separatorBorder); */
-	/* margin-bottom: 15px; */
+/* border-bottom: var(--separatorBorder); */
+/* margin-bottom: 15px; */
 /* } */
 
 #leftContent > button {
@@ -169,9 +169,11 @@ h2 {
 	font-size: 60px;
 }
 
+
+
 p {
 	font-size: 20px;
-	color: #ccc;
+	color: #bbb;
 	/* font-family: 'Jura', sans-serif; */
 	font-family: 'Nunito Sans', sans-serif;
 	/* font-family: 'Tajawal', sans-serif; */

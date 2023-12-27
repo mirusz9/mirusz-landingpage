@@ -35,6 +35,13 @@ export default function Footer() {
 			'1v1 me in chess',
 			"Yoo, it's ASH!",
 			'Use a different password everywhere',
+			'Én amicko',
+			'5p',
+			'Átlagos kedd',
+			'TU Delft is cool',
+			"What's with all the lizard people?",
+			"2.2 is out",
+			'check steam'
 		];
 
 		const rareMessages = [
@@ -47,6 +54,7 @@ export default function Footer() {
 			'395248',
 			'The cake is a lie',
 			'Please make me some marshmallows',
+			'Escape the matrix',
 			` - mirusz9.com ${new Date().getFullYear()}`,
 		];
 

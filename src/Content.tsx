@@ -166,7 +166,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								the prerequisites for any given course.
 							</p>
 							<a href="https://ashschedule.mirusz9.com" target="_blank" className="image">
-								<img src={schedulePlannerImg} alt="Schedule Planner"></img>
+								<img src={schedulePlannerImg} alt="Schedule Planner" loading="lazy"></img>
 							</a>
 							<p>
 								This was one of the biggest projects I've ever worked on, taking up half a year and over a hundred hours of
@@ -186,7 +186,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								is available on my GitHub.
 							</p>
 							<a href="https://github.com/mirusz9/Virus-Simulation" target="_blank" className="image">
-								<img src={virusSimulationImg} alt="Virus Simulation"></img>
+								<img src={virusSimulationImg} alt="Virus Simulation" loading="lazy"></img>
 							</a>
 							<p>
 								This project was inspired by{' '}
@@ -222,7 +222,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								page paper we wrote earned Honorable Mention.
 							</p>
 							<a href="https://himcm.mirusz9.com" target="_blank" className="image">
-								<img src={himcmImg} alt="HiMCM"></img>
+								<img src={himcmImg} alt="HiMCM" loading="lazy"></img>
 							</a>
 							<p>
 								You can try the{' '}
@@ -242,7 +242,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								documents
 							</p>
 							<a className="image" href="https://vlaw.mirusz9.com">
-								<img src={vlawImg} alt="A screenshot of Videki Law" />
+								<img src={vlawImg} alt="A screenshot of Videki Law" loading="lazy" />
 							</a>
 							<p>
 								Sadly I can't include detailed screenshots as all the information is confidential, but I can proudly say
@@ -265,7 +265,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								engine and the map generation.
 							</p>
 							<a className="image" href="https://github.com/mirusz9/2d-game" target="_blank">
-								<img src={gameImg} alt="A screenshot of the game" />
+								<img src={gameImg} alt="A screenshot of the game" loading="lazy" />
 							</a>
 							<p>
 								I am really proud of this project, it has really improved my programming skills and gave me a really good
@@ -287,7 +287,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								realistic.
 							</p>
 							<a className="image" href="https://github.com/mirusz9/rope-simulation" target="_blank">
-								<img src={ropesimImg} alt="A screenshot of the rope simulation" />
+								<img src={ropesimImg} alt="A screenshot of the rope simulation" loading="lazy" />
 							</a>
 							<p>
 								You can play with the simulation by downloading the two files from{' '}
@@ -307,7 +307,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								kinematics). This is a very simple fun app that demonstrates how inverse kinematics work.
 							</p>
 							<a className="image" href="https://github.com/mirusz9/FABRIK" target="_blank">
-								<img src={fabrikImg} alt="A screenshot of the inverse kinematics app" />
+								<img src={fabrikImg} alt="A screenshot of the inverse kinematics app" loading="lazy" />
 							</a>
 							<p>
 								You can{' '}

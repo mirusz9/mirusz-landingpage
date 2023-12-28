@@ -225,11 +225,11 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<img src={himcmImg} alt="HiMCM"></img>
 							</a>
 							<p>
-								You can try the simulation{' '}
+								You can try the{' '}
 								<a href="https://himcm.mirusz9.com" target="_blank">
-									here
+									simulation
 								</a>
-								.
+								here.
 							</p>
 						</section>
 						<section className="secondary">
@@ -241,7 +241,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								Videki Law is a management system for lawyers where the can keep track of their ongoing cases, clients and
 								documents
 							</p>
-							<a className="image">
+							<a className="image" href="https://vlaw.mirusz9.com">
 								<img src={vlawImg} alt="A screenshot of Videki Law" />
 							</a>
 							<p>
@@ -269,9 +269,9 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 							</a>
 							<p>
 								I am really proud of this project, it has really improved my programming skills and gave me a really good
-								introduction to game development. Although the game is super unfinished, you can try it{' '}
+								introduction to game development. Although this prosject is super unfinished, you can{' '}
 								<a href="https://github.com/mirusz9/2d-game" target="_blank">
-									here
+									play the game here
 								</a>
 								.
 							</p>
@@ -292,7 +292,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 							<p>
 								You can play with the simulation by downloading the two files from{' '}
 								<a href="https://github.com/mirusz9/rope-simulation" target="_blank">
-									here
+									my GitHub
 								</a>
 								. You can also build your own rope structure, I've included a very basic editor.
 							</p>
@@ -310,9 +310,9 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<img src={fabrikImg} alt="A screenshot of the inverse kinematics app" />
 							</a>
 							<p>
-								You can try the app{' '}
+								You can{' '}
 								<a href="https://github.com/mirusz9/FABRIK" target="_blank">
-									here
+									try the app here
 								</a>
 								. You're welcome to play around with the code and change some variables such as the number of nodes or the
 								stick length.

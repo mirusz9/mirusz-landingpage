@@ -131,7 +131,6 @@ h5 {
 	font-size: 20px;
 }
 
-
 #randomizeButton {
 	background-color: var(--mainBackgroundCol);
 	border: none;
@@ -200,13 +199,15 @@ p {
 }
 
 p > a {
-	color: #9862e9;
-	text-decoration: none;
+	/* color: #9862e9; */
+	color: #b891f3;
+	text-decoration: underline;
 }
 
 p > a:hover {
-	color: #b086f0;
-	text-decoration: underline;
+	color: #9862e9;
+	/* color: #b086f0; */
+	/* text-decoration: none; */
 }
 
 span.monospace {
@@ -230,22 +231,23 @@ span.date {
 	border-radius: 10px;
 	padding: 5px 10px;
 	transition: background-color 0.2s;
-}
-
-span.date:hover {
 	background-color: var(--mainBackgroundCol);
 }
+
+/* span.date:hover {
+	background-color: var(--mainBackgroundCol);
+	background-color: var(--secondary);
+} */
 
 section.secondary > div > h2 {
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 700;
 	font-size: 40px;
 	color: #ddd;
-
 }
 
 #contactList {
-display: block;
+	display: block;
 }
 
 #contactList li {
@@ -272,7 +274,6 @@ display: block;
 #contactList svg {
 	color: var(--header);
 }
-
 
 @media screen and (max-width: 1000px) {
 	#rightContentWrapper {

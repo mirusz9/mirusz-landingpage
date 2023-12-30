@@ -238,7 +238,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<span className="date"># 13/05/2021</span>
 							</div>
 							<p>
-								Videki Law is a management system for lawyers where the can keep track of their ongoing cases, clients and
+								Videki Law is a management system for lawyers where they can keep track of their ongoing cases, clients and
 								documents
 							</p>
 							<a className="image" href="https://vlaw.mirusz9.com">

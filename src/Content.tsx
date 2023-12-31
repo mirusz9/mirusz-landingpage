@@ -239,7 +239,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 							</div>
 							<p>
 								Videki Law is a management system for lawyers where they can keep track of their ongoing cases, clients and
-								documents
+								documents.
 							</p>
 							<a className="image" href="https://vlaw.mirusz9.com">
 								<img src={vlawImg} alt="A screenshot of Videki Law" loading="lazy" />

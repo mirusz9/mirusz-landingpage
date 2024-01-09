@@ -41,7 +41,11 @@ export default function Footer() {
 			'TU Delft is cool',
 			"What's with all the lizard people?",
 			"2.2 is out",
-			'check steam'
+			'check steam',
+			"23:56",
+			"Rizzmannak nem működik a biciklije ... már megint.",
+			"Ho-hó",
+			"Eldőlsz elkapsz",
 		];
 
 		const rareMessages = [

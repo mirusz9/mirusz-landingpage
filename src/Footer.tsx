@@ -40,12 +40,20 @@ export default function Footer() {
 			'Átlagos kedd',
 			'TU Delft is cool',
 			"What's with all the lizard people?",
-			"2.2 is out",
+			'2.2 is out',
 			'check steam',
-			"23:56",
-			"Rizzmannak nem működik a biciklije ... már megint.",
-			"Ho-hó",
-			"Eldőlsz elkapsz",
+			'23:56',
+			'Rizzmannak nem működik a biciklije ... már megint.',
+			'Ho-hó',
+			'Eldőlsz elkapsz',
+			'404',
+			'Just read the instructions',
+			'Of course I still love you',
+			'undefined',
+			'"I feel the rush.."',
+			"I should've been a cowboy..",
+			'Country music slaps',
+			'Just be honest',
 		];
 
 		const rareMessages = [
@@ -60,6 +68,8 @@ export default function Footer() {
 			'Please make me some marshmallows',
 			'Escape the matrix',
 			` - mirusz9.com ${new Date().getFullYear()}`,
+			':3',
+			"Facts don't care about your feelings",
 		];
 
 		const commonToRareMessageRatio = 4;

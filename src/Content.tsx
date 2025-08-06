@@ -132,8 +132,8 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<a href="https://tudelft.nl" target="_blank">
 									TU Delft
 								</a>
-								. I've been making stuff for fun since 2017, when I learned how to code. If you want to
-								check out my projects, you can take a look at them below.
+								. I've been developing projects for fun since 2017, when I first learned to code. Below
+								you'll find a showcase of my technical projects and achievements.
 							</p>
 						</section>
 						<section>
@@ -141,8 +141,8 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<h2>Projects</h2>
 							</div>
 							<p>
-								Here are the highlights of my many coding projects. Note that most of these (and many
-								more projects that I did not include on this website) are available on my{' '}
+								Here are the highlights of my software development projects. Most of these projects
+								(along with additional work not featured here) are available on my{' '}
 								<a href="https://github.com/mirusz9" target="_blank">
 									GitHub
 								</a>
@@ -166,9 +166,9 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 							</a>
 							<p>
 								The system includes advanced features such as real-time data visualization using D3.js,
-								comprehensive testing with 100% code coverage, and a modular component architecture with
-								Storybook documentation. Key functionalities include team management capabilities,
-								feedback systems for manager-employee communication, advanced search functionality, and
+								testing with 100% code coverage, and a modular component architecture with Storybook
+								documentation. Key functionalities include team management capabilities, feedback
+								systems for manager-employee communication, advanced search functionality, and
 								responsive design with full accessibility support including keyboard navigation
 								throughout the interface.
 							</p>
@@ -186,20 +186,20 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								tool for my high school.
 							</p>
 							<p>
-								Understanding the IB and AP systems was a real challenge for me as our family had no
-								previous experience with these programs. We had to figure out all the requirements from
-								a 100-page document. As this process was overwhelming for many students, I came up with
-								the idea to create a schedule planner for my school. This website aimed to explain how
-								the AP, IB, and credit systems work, what classes one needs to graduate, and the
-								prerequisites for any given course.
+								Recognizing the complexity of the IB and AP academic systems, I identified a significant
+								challenge faced by students and families navigating these programs. The extensive
+								documentation and complex requirements often overwhelmed students during course
+								selection. To address this, I developed a comprehensive schedule planning tool for my
+								school that simplifies the AP, IB, and credit systems, clearly outlines graduation
+								requirements, and provides prerequisite information for all courses.
 							</p>
 							<a href="https://ashschedule.mirusz9.com" target="_blank" className="image">
 								<img src={schedulePlannerImg} alt="Schedule Planner" loading="lazy"></img>
 							</a>
 							<p>
-								This was one of the biggest projects I've ever worked on, taking up half a year and over
-								a hundred hours of work. Because of this, I keep the source code private.{' '}
-								<span className="small">I'm sorry :(</span>
+								This project represents one of my most significant undertakings so far, requiring six
+								months of development and over a hundred hours of dedicated work. Due to the nature of
+								the content, the source code remains private.
 							</p>
 						</section>
 						<section className="secondary">
@@ -246,9 +246,10 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								: The Need for Bees (and not just for honey)
 							</p>
 							<p>
-								Me and three of my classmates partnered up to compete in the High School Mathematical
-								Contest in Modeling, where we had to create a model that reflects the population size of
-								a bee colony over time. The twenty-four page paper we wrote earned Honorable Mention.
+								Three classmates and I collaborated to compete in the High School Mathematical Contest
+								in Modeling, developing a mathematical model to predict bee colony population dynamics
+								over time. Our comprehensive twenty-four page research paper earned an Honorable Mention
+								award.
 							</p>
 							<a href="https://himcm.mirusz9.com" target="_blank" className="image">
 								<img src={himcmImg} alt="HiMCM" loading="lazy"></img>
@@ -267,15 +268,16 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<span className="date"># 13/05/2021</span>
 							</div>
 							<p>
-								Videki Law is a management system for lawyers where they can keep track of their ongoing
-								cases, clients and documents.
+								Videki Law is a case management system designed for legal professionals to efficiently
+								track ongoing cases, manage client relationships, and organize legal documentation.
 							</p>
 							<a className="image" href="https://vlaw.mirusz9.com">
 								<img src={vlawImg} alt="A screenshot of Videki Law" loading="lazy" />
 							</a>
 							<p>
-								Sadly I can't include detailed screenshots as all the information is confidential, but I
-								can proudly say that this has been one of the biggest projects I've ever worked on.
+								Unfortunately I can't include detailed screenshots as all the information is
+								confidential, but I can proudly say that this has been one of the biggest projects I've
+								ever worked on.
 							</p>
 						</section>
 						<section className="secondary">
@@ -284,25 +286,24 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<span className="date"># 09/06/2020</span>
 							</div>
 							<p>
-								I attempted to create a 2D sidescroller game, similar to Terraria <i>from scratch</i>. I
-								was really drawn to the idea of creating my own procedural world generation code, as
-								I've always wondered how games like Minecraft and Terraria generate their huge and
-								diverse environments.
+								I developed a 2D sidescroller game similar to Terraria, building everything{' '}
+								<i>from scratch</i>. This project was driven by my fascination with procedural world
+								generation algorithms and my curiosity about how games like Minecraft and Terraria
+								create their expansive and diverse environments.
 							</p>
 							<p>
-								The map generator procedurally creates one large interconnected cave that tries to be as
-								realistic as possible. Everything was made from scratch: the textures, the physics and
-								collision system, the rendering engine and the map generation.
+								The map generator procedurally creates interconnected cave systems designed for realism.
+								All components were developed from scratch, including custom textures, physics and
+								collision systems, rendering engine, and world generation algorithms.
 							</p>
 							<a className="image" href="https://github.com/mirusz9/2d-game" target="_blank">
 								<img src={gameImg} alt="A screenshot of the game" loading="lazy" />
 							</a>
 							<p>
-								I am really proud of this project, it has really improved my programming skills and gave
-								me a really good introduction to game development. Although this project is super
-								unfinished, you can{' '}
+								This project gratly enhanced my programming capabilities and provided valuable
+								experience in game development fundamentals. While still in development, you can{' '}
 								<a href="https://github.com/mirusz9/2d-game" target="_blank">
-									play the game here
+									explore the current build here
 								</a>
 								.
 							</p>
@@ -313,9 +314,9 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<span className="date"># 10/06/2022</span>
 							</div>
 							<p>
-								This is a fun project I worked on in my free time where I try to simulate rope and
-								cloth-like materials by connecting nodes with sticks and applying some basics physics to
-								them. The end result is surprisingly realistic.
+								This physics simulation project models rope and cloth-like materials by connecting nodes
+								with rigid constraints and applying fundamental physics principles. The implementation
+								achieves remarkably realistic material behavior and dynamics.
 							</p>
 							<a className="image" href="https://github.com/mirusz9/rope-simulation" target="_blank">
 								<img src={ropesimImg} alt="A screenshot of the rope simulation" loading="lazy" />
@@ -323,9 +324,10 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 							<p>
 								You can play with the simulation by downloading the two files from{' '}
 								<a href="https://github.com/mirusz9/rope-simulation" target="_blank">
-									my GitHub
+									my GitHub repository
 								</a>
-								. You can also build your own rope structure, I've included a very basic editor.
+								. The project includes a basic editor for creating custom rope structures and
+								configurations.
 							</p>
 						</section>
 						<section className="secondary">
@@ -342,12 +344,12 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<img src={fabrikImg} alt="A screenshot of the inverse kinematics app" loading="lazy" />
 							</a>
 							<p>
-								You can{' '}
+								The interactive demonstration is{' '}
 								<a href="https://github.com/mirusz9/FABRIK" target="_blank">
-									try the app here
+									available here
 								</a>
-								. You're welcome to play around with the code and change some variables such as the
-								number of nodes or the stick length.
+								. The codebase supports customization of parameters such as node count and segment
+								length for experimentation.
 							</p>
 						</section>
 
@@ -356,8 +358,8 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 								<h2>Contact</h2>
 							</div>
 							<p>
-								If you'd like to contact me my username is <span className="monospace">mirusz9</span> on
-								every single platform. <br /> I've included a few links for you:
+								Feel free to connect with me through any of the platforms below. You can find me as{' '}
+								<span className="monospace">mirusz9</span> across all platforms:
 							</p>
 							<ul id="contactList">
 								<li>

@@ -59,7 +59,7 @@ export default function Footer() {
 		const rareMessages = [
 			'Dark. Darker. Yet darker.',
 			'To solve my senior quote, just...',
-			'Take a look at my gihub',
+			'Take a look at my github',
 			'MUPCWSIMMAFOIAROHE',
 			'Name five Jennifer Lawrence movies',
 			'How are some people so dumb??',

@@ -85,7 +85,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 					</button>
 					<button onClick={(e) => scrollToIndex(e, 1)}>Projects</button>
 					<button onClick={(e) => scrollToIndex(e, 2)} className="secondary">
-						Skills Management Tool
+						Skills Management
 					</button>
 					<button onClick={(e) => scrollToIndex(e, 3)} className="secondary">
 						Schedule Planner
@@ -299,7 +299,7 @@ function Content({ scroll, randomizeCol }: IContentProps) {
 							</a>
 							<p>
 								I am really proud of this project, it has really improved my programming skills and gave
-								me a really good introduction to game development. Although this prosject is super
+								me a really good introduction to game development. Although this project is super
 								unfinished, you can{' '}
 								<a href="https://github.com/mirusz9/2d-game" target="_blank">
 									play the game here
